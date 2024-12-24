@@ -1,48 +1,75 @@
-# Astro Starter Kit: Basics
 
-```sh
-npm create astro@latest -- --template basics
-```
+# Portfolio de Laura Yachelini 🌟
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Este es el repositorio de mi portafolio personal, desarrollado con **Astro** y **Tailwind CSS**. Aquí muestro mis proyectos, experiencia laboral, y habilidades como desarrolladora web, docente y emprendedora.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Portfolio Preview](https://source.unsplash.com/800x400/?portfolio)
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 🚀 Estructura del Proyecto
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+El proyecto está organizado de la siguiente manera:
 
 ```text
 /
 ├── public/
 │   └── favicon.svg
 ├── src/
+│   ├── components/
+│   │   ├── AboutMe.astro
+│   │   ├── Experience.astro
+│   │   ├── Projects.astro
+│   │   └── icons/
+│   │       ├── Astro.astro
+│   │       ├── Tailwind.astro
+│   │       └── ...
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
-│       └── index.astro
+│       ├── index.astro
+│       └── ...
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Para aprender más sobre la estructura de carpetas de un proyecto Astro, consulta la [documentación oficial](https://docs.astro.build/en/basics/project-structure/).
 
-## 🧞 Commands
+## 🛠️ Comandos
 
-All commands are run from the root of the project, from a terminal:
+Desde la raíz del proyecto, ejecuta los siguientes comandos en la terminal:
 
-| Command                   | Action                                           |
+| Comando                   | Acción                                           |
 | :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| `npm install`             | Instala las dependencias                         |
+| `npm run dev`             | Inicia el servidor de desarrollo en `localhost:4321` |
+| `npm run build`           | Construye el sitio para producción en `./dist/`  |
+| `npm run preview`         | Previsualiza la versión de producción localmente |
+| `npm run astro ...`       | Ejecuta comandos CLI de Astro                    |
+| `npm run astro -- --help` | Muestra ayuda sobre el CLI de Astro              |
 
-## 👀 Want to learn more?
+## 💻 Tecnologías Utilizadas
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Astro**: Framework de desarrollo rápido y eficiente para sitios estáticos.
+- **Tailwind CSS**: Sistema de utilidades para estilizar con clases.
+- **HTML y CSS**: Estructuración y diseño básico.
+- **JavaScript**: Funcionalidades adicionales.
+
+## 🌟 Proyectos Destacados
+
+### **Farmacia Colón**
+Desarrollé una página estática utilizando HTML, CSS y Bootstrap, optimizada para dispositivos móviles.
+
+### **SintheSky**
+Un e-commerce minimalista creado con Astro y Tailwind CSS para mostrar productos de cerámica.
+
+### **Lumeni**
+Plataforma para psicólogos, desarrollada con Laravel y Tailwind CSS, para la gestión de pacientes y sesiones.
+
+## 🤝 Contribuir
+
+¡Siempre estoy abierta a sugerencias y mejoras! Si tienes ideas o encuentras algún problema, no dudes en abrir un issue o enviar un pull request.
+
+## 👩‍💻 Contacto
+
+Puedes visitar mi portafolio en [mi página web](https://github.com/LauYache/portfolio-lby) o contactarme a través de:
+
+- **Email:** laura.yachelini@gmail.com
+- **LinkedIn:** [Laura Yachelini](https://linkedin.com/in/laurayachelini)
