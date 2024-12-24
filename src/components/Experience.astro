@@ -1,0 +1,46 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+  {
+    date: "Actualmente...",
+    title: "Desarrolladora Web Freelance",
+    company: "FlooLab",
+    description:
+      "Fundé FlooLab, una empresa especializada en el desarrollo de páginas web y soluciones tecnológicas para pequeñas empresas y emprendedores. Diseñamos interfaces minimalistas, optimizamos funcionalidades y garantizamos accesibilidad en cada proyecto.",
+    link: "https://flooLab.com", 
+  },
+  {
+    date: "Actualmente...",
+    title: "Desarrolladora Web Freelance",
+    company: "Proyectos Independientes",
+    description:
+      "Trabajo en la creación de páginas web y soluciones tecnológicas para emprendedores y pequeñas empresas. Enfocada en interfaces minimalistas, funcionalidad, y accesibilidad.",
+    link: "https://github.com/laurayachelini",
+  },
+  {
+    date: "2024",
+    title: "Docente de Desarrollo Web",
+    company: "Universidad y Talleres",
+    description:
+      "Imparto clases sobre desarrollo web (HTML, CSS, Bootstrap y JavaScript) para estudiantes y profesionales. Desarrollo ejercicios prácticos y recursos educativos para mejorar la experiencia de aprendizaje.",
+  },
+  {
+    date: "2024",
+    title: "Participación en Bootcamps",
+    company: "CILSA y Codo a Codo",
+    description:
+      "Participé en el desarrollo de proyectos colaborativos, incluyendo una página web para una pinturería, y trabajé en equipo utilizando metodologías ágiles.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
