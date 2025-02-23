@@ -69,7 +69,7 @@ Plataforma para psicólogos, desarrollada con Laravel y Tailwind CSS, para la ge
 
 ## 👩‍💻 Contacto
 
-Puedes visitar mi portafolio en [mi página web](https://github.com/LauYache/portfolio-lby) o contactarme a través de:
+Puedes visitar mi portafolio en [mi página web](https://portfolio-lby.vercel.app/) o contactarme a través de:
 
 - **Email:** laura.yachelini@gmail.com
-- **LinkedIn:** [Laura Yachelini](https://linkedin.com/in/laurayachelini)
+- **LinkedIn:** [Laura Yachelini](https://linkedin.com/in/lauyache)
