@@ -46,6 +46,15 @@ const experience = [
 const projects = [
   {
     number: "01",
+    title: "ProbaLab",
+    stack: "iOS 18 · Swift 6 · SwiftUI · Swift Charts · Swift Testing",
+    text: "Calculadora nativa de distribuciones de probabilidad discretas para iOS con visualización gráfica interactiva, combinatoria en log-espacio y 85 tests unitarios.",
+    image: `${assetBase}projects/probalab.png`,
+    imageAlt: "Vista previa de la aplicación iOS ProbaLab mostrando gráficos de probabilidad",
+    code: "https://github.com/lbyache/ProbaLab"
+  },
+  {
+    number: "02",
     title: "LumeFresh Shop",
     stack: "HTML/CSS/JS vanilla · Web Components · MongoDB · Mercado Pago",
     text: "Tienda online con componentes web, persistencia de datos y flujo de pagos integrado.",
@@ -54,16 +63,16 @@ const projects = [
     preview: "https://lumefresh.shop/"
   },
   {
-    number: "02",
+    number: "03",
     title: "Farmacia Colón",
     stack: "Laravel · HTML/Tailwind",
     text: "Sitio web para farmacia desarrollado con Laravel y una interfaz construida con HTML y Tailwind.",
     image: `${assetBase}projects/farmacia-colon.webp`,
     imageAlt: "Vista previa local del proyecto Farmacia Colón",
-    code: "https://github.com/yachela/web-fcia-colon"
+    code: "https://github.com/lbyache/web-farmacia-colon"
   },
   {
-    number: "03",
+    number: "04",
     title: "Himnos de Gloria",
     stack: "HTML/Bootstrap",
     text: "Sitio web de himnos construido con HTML y Bootstrap.",
@@ -72,59 +81,58 @@ const projects = [
     preview: "https://himnariodegloria.web.app/"
   },
   {
-    number: "04",
+    number: "05",
     title: "SintheSky",
     stack: "Astro/Tailwind CSS",
     text: "Sitio web desarrollado con Astro y Tailwind CSS.",
     image: `${assetBase}projects/sinthesky.webp`,
     imageAlt: "Vista previa local del proyecto SintheSky",
-    code: "https://github.com/LauYache/sinthesky-web",
     preview: "https://sinthesky.vercel.app/"
   },
   {
-    number: "05",
+    number: "06",
     title: "diWall",
-    stack: "Swift · iOS",
+    stack: "Swift · SwiftUI · SwiftData · iOS",
     text: "Aplicación para gestionar finanzas personales, registrar gastos, establecer metas de ahorro y visualizar ingresos.",
     code: "https://github.com/lbyache/diWall"
   },
   {
-    number: "06",
+    number: "07",
     title: "landmarks",
     stack: "Swift · SwiftUI · MVVM",
     text: "Aplicación iOS para marcar lugares favoritos e incluirlos en una lista.",
     code: "https://github.com/lbyache/landmarks"
   },
   {
-    number: "07",
+    number: "08",
     title: "Cookcademy",
     stack: "Swift · SwiftUI · Xcode",
     text: "Aplicación para guardar y editar recetas favoritas.",
     code: "https://github.com/lbyache/Cookcademy"
   },
   {
-    number: "08",
-    title: "Bulleyes",
+    number: "09",
+    title: "Bullseye",
     stack: "Swift · SwiftUI · Xcode · MVVM",
     text: "Juego para iOS basado en el lanzamiento clásico de dardos.",
     code: "https://github.com/lbyache/Bulleyes"
   },
   {
-    number: "09",
+    number: "10",
     title: "calculator",
     stack: "Swift · SwiftUI · Xcode · MVVM",
     text: "Calculadora para iOS con operaciones matemáticas básicas.",
     code: "https://github.com/lbyache/calculator"
   },
   {
-    number: "10",
+    number: "11",
     title: "Code-History-Quiz",
     stack: "Swift · SwiftUI · Xcode",
     text: "Juego de preguntas sobre historia y cultura general de la programación.",
     code: "https://github.com/lbyache/Code-History-Quiz"
   },
   {
-    number: "11",
+    number: "12",
     title: "GenKeep",
     stack: "Swift · SwiftUI · MVVM · Firebase Firestore/Auth",
     text: "Aplicación móvil para conectar a personas mayores con cuidadores cercanos durante emergencias.",
@@ -132,8 +140,8 @@ const projects = [
   }
 ];
 
-const featuredProjects = projects.slice(0, 4);
-const practiceProjects = projects.slice(4);
+const featuredProjects = projects.slice(0, 5);
+const practiceProjects = projects.slice(5);
 ---
 
 <html lang="es">
@@ -146,6 +154,11 @@ const practiceProjects = projects.slice(4);
     <meta property="og:description" content="C#/.NET, APIs, sistemas empresariales y desarrollo iOS con SwiftUI." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://lbyache.github.io/portfolio-lby/" />
+    <meta property="og:image" content="https://lbyache.github.io/portfolio-lby/foto.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Laura Belén Yachelini — Software Developer" />
+    <meta name="twitter:description" content="C#/.NET, APIs, sistemas empresariales y desarrollo iOS con SwiftUI." />
+    <meta name="twitter:image" content="https://lbyache.github.io/portfolio-lby/foto.webp" />
     <link rel="canonical" href="https://lbyache.github.io/portfolio-lby/" />
     <link rel="icon" type="image/svg+xml" href={`${assetBase}favicon.svg`} />
     <title>Laura Belén Yachelini — Desarrollo de software</title>
@@ -161,6 +174,8 @@ const practiceProjects = projects.slice(4);
         <nav aria-label="Navegación principal">
           <a href="#sobre-mi">Sobre mí</a>
           <a href="#experiencia">Experiencia</a>
+          <a href="#habilidades">Habilidades</a>
+          <a href="#educacion">Formación</a>
           <a href="#proyectos">Proyectos</a>
           <a href="https://github.com/lbyache" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="#contacto">Contacto</a>
@@ -178,11 +193,11 @@ const practiceProjects = projects.slice(4);
             <a class="hero-pill" href="mailto:lbyachelini@gmail.com"><span aria-hidden="true">✉</span> Contáctame</a>
             <a class="hero-pill" href="https://linkedin.com/in/lauyache" target="_blank" rel="noopener noreferrer"><svg class="linkedin-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5.2 8.2H2V22h3.2V8.2ZM3.6 2A1.9 1.9 0 1 0 3.6 5.8 1.9 1.9 0 0 0 3.6 2ZM22 13.9c0-4.1-2.2-6-5.1-6-2.4 0-3.4 1.3-4 2.2V8.2H9.7V22H13v-6.8c0-1.8.3-3.6 2.6-3.6 2.3 0 2.3 2.1 2.3 3.7V22H22v-8.1Z"/></svg> LinkedIn</a>
             <a class="hero-pill" href="https://github.com/lbyache" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">⌘</span> GitHub</a>
-            <a class="hero-pill" href={`${assetBase}cv/laura-yachelini-cv.pdf`}><span aria-hidden="true">↓</span> Descargar CV</a>
+            <a class="hero-pill" href={`${assetBase}cv/laura-yachelini-cv.pdf`} target="_blank" rel="noopener noreferrer" download="CV-Laura-Belen-Yachelini.pdf"><span aria-hidden="true">↓</span> Descargar CV</a>
           </div>
           <div class="hero-actions">
             <a class="button button-primary" href="#proyectos">Ver proyectos <span aria-hidden="true">↓</span></a>
-            <a class="button button-secondary" href={`${assetBase}cv/laura-yachelini-cv.pdf`}>Descargar CV <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href={`${assetBase}cv/laura-yachelini-cv.pdf`} target="_blank" rel="noopener noreferrer" download="CV-Laura-Belen-Yachelini.pdf">Descargar CV <span aria-hidden="true">↗</span></a>
           </div>
         </div>
         <aside class="profile-panel" aria-label="Perfil profesional">
@@ -256,8 +271,8 @@ const practiceProjects = projects.slice(4);
           </div>
         </div>
         <div class="education-list">
-          <div class="education-row"><span>01</span><strong>Analista de Sistemas</strong><em>Escuela de Arte Multimedial Da Vinci</em></div>
-          <div class="education-row"><span>02</span><strong>Licenciatura en Ciencia de Datos</strong><em>Universidad Pública de Buenos Aires · 2026 - En curso</em></div>
+          <div class="education-row"><span>01</span><strong>Analista de Sistemas</strong><em>Escuela de Arte Multimedial Da Vinci · 2023–2026</em></div>
+          <div class="education-row"><span>02</span><strong>Licenciatura en Ciencia de Datos</strong><em>Universidad de Buenos Aires (UBA) · 2026 - En curso</em></div>
           <div class="education-row"><span>03</span><strong>Curso Fullstack Node.js</strong><em>Codo a codo · Febrero 2023</em></div>
           <div class="education-row"><span>04</span><strong>Abogacía</strong><em>Universidad Católica Argentina · 2012–2017</em></div>
         </div>
@@ -330,7 +345,7 @@ const practiceProjects = projects.slice(4);
         <div class="section-heading">
           <div>
             <p class="section-label">06 / Próximo foco</p>
-            <h2 id="next-projects-title">Próximos proyectos iOS</h2>
+            <h2 id="next-projects-title">Ejes de enfoque & Roadmap iOS</h2>
           </div>
         </div>
         <ol class="next-project-list">
@@ -348,6 +363,7 @@ const practiceProjects = projects.slice(4);
           <p>¿Buscás alguien para backend .NET, APIs o desarrollo iOS? Escribime y conversemos.</p>
           <div class="contact-actions">
             <a class="button button-light" href="mailto:lbyachelini@gmail.com">lbyachelini@gmail.com</a>
+            <a class="button button-light button-outline-light" href="https://linkedin.com/in/lauyache" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
             <a class="button button-light button-outline-light" href="https://github.com/lbyache" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
           </div>
         </div>
