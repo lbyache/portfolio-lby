@@ -120,9 +120,9 @@ h2 { margin: 16px 0 0; font-size: clamp(2.6rem, 5vw, 4.5rem); font-weight: 500; 
 .mockup-04 .mockup-block-one { width: 52%; }
 .mockup-04 .mockup-block-two { width: 30%; height: 31%; border: 0; background: var(--lilac); }
 .mockup-04 .mockup-block-three { width: 42%; height: 8%; top: 61%; background: var(--violet); }
-.mockup-05, .mockup-06, .mockup-07, .mockup-08, .mockup-09, .mockup-10, .mockup-11 { background: #f3eef9; }
-.mockup-05 .mockup-block-two, .mockup-06 .mockup-block-two, .mockup-07 .mockup-block-two, .mockup-08 .mockup-block-two, .mockup-09 .mockup-block-two, .mockup-10 .mockup-block-two, .mockup-11 .mockup-block-two { width: 32%; height: 35%; border: 1px solid var(--violet); border-radius: 50%; }
-.mockup-05 .mockup-block-three, .mockup-06 .mockup-block-three, .mockup-07 .mockup-block-three, .mockup-08 .mockup-block-three, .mockup-09 .mockup-block-three, .mockup-10 .mockup-block-three, .mockup-11 .mockup-block-three { width: 44%; height: 8%; top: 61%; background: var(--lilac); }
+.mockup-05, .mockup-06, .mockup-07, .mockup-08, .mockup-09, .mockup-10, .mockup-11, .mockup-12, .mockup-13 { background: #f3eef9; }
+.mockup-05 .mockup-block-two, .mockup-06 .mockup-block-two, .mockup-07 .mockup-block-two, .mockup-08 .mockup-block-two, .mockup-09 .mockup-block-two, .mockup-10 .mockup-block-two, .mockup-11 .mockup-block-two, .mockup-12 .mockup-block-two, .mockup-13 .mockup-block-two { width: 32%; height: 35%; border: 1px solid var(--violet); border-radius: 50%; }
+.mockup-05 .mockup-block-three, .mockup-06 .mockup-block-three, .mockup-07 .mockup-block-three, .mockup-08 .mockup-block-three, .mockup-09 .mockup-block-three, .mockup-10 .mockup-block-three, .mockup-11 .mockup-block-three, .mockup-12 .mockup-block-three, .mockup-13 .mockup-block-three { width: 44%; height: 8%; top: 61%; background: var(--lilac); }
 .project-stack { margin-top: 6px !important; color: var(--violet-dark) !important; font-family: var(--mono); font-size: .62rem !important; }
 .project-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .project-actions a { color: var(--violet-dark); font-family: var(--mono); font-size: .65rem; text-decoration: none; }
