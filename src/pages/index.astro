@@ -47,55 +47,76 @@ const projects = [
   {
     number: "01",
     title: "ProbaLab",
+    type: "ios",
+    badge: "iOS 18 Native",
     stack: "iOS 18 · Swift 6 · SwiftUI · Swift Charts · Swift Testing",
     text: "Calculadora nativa de distribuciones de probabilidad discretas para iOS con visualización gráfica interactiva, combinatoria en log-espacio y 85 tests unitarios.",
     image: `${assetBase}projects/probalab.png`,
-    imageAlt: "Vista previa de la aplicación iOS ProbaLab mostrando gráficos de probabilidad",
+    screens: [
+      { id: "distribucion", label: "Distribución", src: `${assetBase}projects/probalab.png` },
+      { id: "calculadora", label: "Calculadora", src: `${assetBase}projects/probalab-calculadora.png` },
+      { id: "modelo", label: "Momentos", src: `${assetBase}projects/probalab-modelo.png` }
+    ],
+    imageAlt: "Vista previa de la aplicación iOS ProbaLab mostrando gráficos de probabilidad en simulador de iPhone",
     code: "https://github.com/lbyache/ProbaLab"
   },
   {
     number: "02",
     title: "placarcito",
+    type: "ios",
+    badge: "Apple Vision · SwiftData",
     stack: "iOS 18 · Swift 6 · SwiftUI · SwiftData · Apple Vision · Unit Tests",
     text: "Armario cápsula inteligente para iOS: catalogación de prendas con segmentación y remoción de fondo on-device (Apple Vision), sugerencias climáticas de outfits y persistencia SwiftData.",
     image: `${assetBase}projects/placarcito.png`,
-    imageAlt: "Vista previa de la aplicación iOS placarcito mostrando el catálogo de armario y estado de prendas",
+    imageAlt: "Vista previa de la aplicación iOS placarcito en simulador de iPhone",
     code: "https://github.com/lbyache/placarcito"
   },
   {
     number: "03",
     title: "LumeFresh Shop",
+    type: "web",
+    badge: "Web App",
+    urlBar: "lumefresh.shop",
     stack: "HTML/CSS/JS vanilla · Web Components · MongoDB · Mercado Pago",
     text: "Tienda online con componentes web, persistencia de datos y flujo de pagos integrado.",
     image: `${assetBase}projects/lumefresh.png`,
-    imageAlt: "Vista previa local del proyecto LumeFresh Shop",
+    imageAlt: "Vista previa del proyecto LumeFresh Shop en ventana de navegador",
     preview: "https://lumefresh.shop/"
   },
   {
     number: "04",
     title: "Farmacia Colón",
+    type: "web",
+    badge: "Web Institucional",
+    urlBar: "farmaciacolon.com.ar",
     stack: "Laravel · HTML/Tailwind",
     text: "Sitio web para farmacia desarrollado con Laravel y una interfaz construida con HTML y Tailwind.",
     image: `${assetBase}projects/farmacia-colon.webp`,
-    imageAlt: "Vista previa local del proyecto Farmacia Colón",
+    imageAlt: "Vista previa del proyecto Farmacia Colón en ventana de navegador",
     code: "https://github.com/lbyache/web-farmacia-colon"
   },
   {
     number: "05",
     title: "Himnos de Gloria",
+    type: "web",
+    badge: "Web App",
+    urlBar: "himnariodegloria.web.app",
     stack: "HTML/Bootstrap",
     text: "Sitio web de himnos construido con HTML y Bootstrap.",
     image: `${assetBase}projects/himnos.webp`,
-    imageAlt: "Vista previa local del proyecto Himnos de Gloria",
+    imageAlt: "Vista previa del proyecto Himnos de Gloria en ventana de navegador",
     preview: "https://himnariodegloria.web.app/"
   },
   {
     number: "06",
     title: "SintheSky",
+    type: "web",
+    badge: "Astro",
+    urlBar: "sinthesky.vercel.app",
     stack: "Astro/Tailwind CSS",
     text: "Sitio web desarrollado con Astro y Tailwind CSS.",
     image: `${assetBase}projects/sinthesky.webp`,
-    imageAlt: "Vista previa local del proyecto SintheSky",
+    imageAlt: "Vista previa del proyecto SintheSky en ventana de navegador",
     preview: "https://sinthesky.vercel.app/"
   },
   {
@@ -298,10 +319,71 @@ const practiceProjects = projects.slice(6);
           </div>
           <div class="project-index">
             {featuredProjects.map((project) => (
-              <article class="project-row">
+              <article class={`project-row project-row-featured ${project.type ? `project-row-${project.type}` : ''}`} data-project={project.title}>
                 <span class="project-number">{project.number}</span>
-                <div class="project-heading">
-                  {project.image ? (
+                <div class="project-preview-slot">
+                  {project.type === 'ios' ? (
+                    <div class="device-simulator-wrapper">
+                      <div class="device-iphone" role="region" aria-label={`Simulador iPhone con pantalla de ${project.title}`}>
+                        <div class="device-island">
+                          <span class="device-camera"></span>
+                        </div>
+                        <div class="device-screen">
+                          <img
+                            class="device-screen-img"
+                            src={project.screens ? project.screens[0].src : project.image}
+                            alt={project.imageAlt}
+                            width="1206"
+                            height="2622"
+                            loading="lazy"
+                          />
+                          <div class="device-glare" aria-hidden="true"></div>
+                        </div>
+                        <div class="device-home-bar" aria-hidden="true"></div>
+                      </div>
+                      {project.screens && project.screens.length > 1 && (
+                        <div class="simulator-screen-selector" role="tablist" aria-label={`Vistas de ${project.title}`}>
+                          {project.screens.map((screen, idx) => (
+                            <button
+                              type="button"
+                              role="tab"
+                              aria-selected={idx === 0 ? "true" : "false"}
+                              class={`simulator-pill ${idx === 0 ? 'is-active' : ''}`}
+                              data-screen-src={screen.src}
+                            >
+                              {screen.label}
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : project.type === 'web' ? (
+                    <div class="device-browser-wrapper">
+                      <div class="device-browser">
+                        <div class="browser-topbar">
+                          <div class="browser-traffic-lights" aria-hidden="true">
+                            <span class="browser-dot red"></span>
+                            <span class="browser-dot yellow"></span>
+                            <span class="browser-dot green"></span>
+                          </div>
+                          <div class="browser-url-pill">
+                            <span class="browser-lock" aria-hidden="true">https://</span>
+                            <span class="browser-host">{project.urlBar}</span>
+                          </div>
+                        </div>
+                        <div class="browser-viewport">
+                          <img
+                            class="browser-img"
+                            src={project.image}
+                            alt={project.imageAlt}
+                            width="1920"
+                            height="1440"
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  ) : project.image ? (
                     <img class="project-image" src={project.image} alt={project.imageAlt} width="1920" height="1440" loading="lazy" />
                   ) : (
                     <div class={`project-mockup mockup-${project.number}`} role="img" aria-label={`Composición visual abstracta para ${project.title}`}>
@@ -311,13 +393,20 @@ const practiceProjects = projects.slice(6);
                       <span class="mockup-block mockup-block-three" aria-hidden="true"></span>
                     </div>
                   )}
-                  <h3>{project.title}</h3>
-                  <p class="project-stack">{project.stack}</p>
                 </div>
-                <p>{project.text}</p>
+
+                <div class="project-info">
+                  <div class="project-header">
+                    {project.badge && <span class="project-badge">{project.badge}</span>}
+                    <h3>{project.title}</h3>
+                    <p class="project-stack">{project.stack}</p>
+                  </div>
+                  <p class="project-text">{project.text}</p>
+                </div>
+
                 <div class="project-actions">
-                  {project.code && <a href={project.code} target="_blank" rel="noreferrer">Código <span aria-hidden="true">↗</span></a>}
-                  {project.preview && <a href={project.preview} target="_blank" rel="noreferrer">Preview <span aria-hidden="true">↗</span></a>}
+                  {project.code && <a href={project.code} target="_blank" rel="noopener noreferrer">Código <span aria-hidden="true">↗</span></a>}
+                  {project.preview && <a href={project.preview} target="_blank" rel="noopener noreferrer">Preview <span aria-hidden="true">↗</span></a>}
                 </div>
               </article>
             ))}
@@ -378,5 +467,32 @@ const practiceProjects = projects.slice(6);
         </div>
       </section>
     </main>
+
+    <script>
+      // Interactive screen switching for iOS simulator
+      document.querySelectorAll('.simulator-pill').forEach((pill) => {
+        pill.addEventListener('click', () => {
+          const wrapper = pill.closest('.device-simulator-wrapper');
+          if (!wrapper) return;
+          const targetSrc = pill.getAttribute('data-screen-src');
+          const screenImg = wrapper.querySelector('.device-screen-img') as HTMLImageElement | null;
+          
+          if (screenImg && targetSrc && screenImg.getAttribute('src') !== targetSrc) {
+            screenImg.classList.add('is-switching');
+            setTimeout(() => {
+              screenImg.src = targetSrc;
+              screenImg.classList.remove('is-switching');
+            }, 160);
+          }
+          
+          wrapper.querySelectorAll('.simulator-pill').forEach((p) => {
+            p.classList.remove('is-active');
+            p.setAttribute('aria-selected', 'false');
+          });
+          pill.classList.add('is-active');
+          pill.setAttribute('aria-selected', 'true');
+        });
+      });
+    </script>
   </body>
 </html>
